@@ -1,0 +1,55 @@
+@keyframes color{
+	from {background-color: pink;}
+	to {background: color: green;}
+}
+.container{
+    width: 1080px;
+    margin: 0px auto;
+    font-size: 1em;
+    font-family: "Arial", Georgia, Seriaf;
+    font-size: 15px;
+    animation-name: color;
+    animation-duration: 10s;
+}
+@keyframes rotar{
+	0%{
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-0-transform: rotate(90deg);
+		-ns-transform: rotate(90deg);
+		transform: rotate(90deg);
+}
+    25%{
+    	-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-0-transform: rotate(180deg);
+		-ns-transform: rotate(180deg);
+		transform: rotate(180deg);
+}
+    50%{
+    	-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-0-transform: rotate(270deg);
+		-ns-transform: rotate(270deg);
+		transform: rotate(270deg);
+}
+    100%{
+    	-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-0-transform: rotate(360deg);
+		-ns-transform: rotate(360deg);
+		transform: rotate(360deg);
+    }
+}
+@keyframes aparecer{
+  from{width: 0;}
+  to{width: 24em;}
+}
+.imagen{
+    width: 200px;
+    height: 200px;
+    border: 2px solid blue;
+    border-radius: 20%;
+    animation-name: rotar, aparecer;
+    animation-duration: 3s;
+}

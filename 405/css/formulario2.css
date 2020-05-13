@@ -1,0 +1,36 @@
+body
+{
+    color: black;
+}
+#registro{
+  width: 70%;
+  height: 50%;
+  margin: auto;
+}
+h2{
+  color: purple;
+  font-size: 40px;
+}
+
+.cajas{
+  width: 100%;
+  background: transparent;
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+  border-bottom: 2px solid brown;
+}
+.cajas focus{
+  border-bottom: 2px solid red;
+}
+#btn{
+  width: 400px;
+  background: purple;
+  color: white;
+  border-radius: 10px;
+}
+#btn:hover{
+  background: skyblue;
+  color: white;
+  cursor: pointer;
+}

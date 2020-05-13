@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=relaway);
+h2{
+	vertical-align:center;
+	text-align:center;s
+}
+html , body {
+  margin:0;
+  height:100;
+
+}
+*{
+  font-family: "relaway";
+  box-sizing: border -box;
+}

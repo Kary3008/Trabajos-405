@@ -1,0 +1,207 @@
+body{/*cuerpo de la pagina*/
+	background: #ccc;
+	color: #000;
+	font-family: "Calibri", Georgia, Seriaf;
+	font-size: 20px;
+	line-height: 20pt;
+}
+
+h1{
+    font-family: "Arial", Georgia, Seriaf;
+    font-size: 80px;
+		color: #222;
+}
+
+h2 {
+	color: #222;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+h3 {
+	color: #222;
+}
+.text {
+	text-align: justify;
+	margin-right: 55px;
+	margin-left: 55px;
+}
+
+nav{
+overflow: hidden;
+background: #444;
+margin-top: 0.5%;
+margin-bottom: 0.5%;
+}
+nav ul{
+list-style-type: none;
+float: left;
+padding: 0px;
+width: 100%;
+display: table;
+text-align: center;
+font-size: 20px;
+color: #fff;
+}
+nav ul li{
+display: inline-block;
+float: none;
+padding: 3px 10px;
+margin: 2px;
+background: #777;
+-moz-border-radius:3px;-webkit-border-radius:3px;-o-borderradius:3px;border-radius: 3px;
+}
+
+/*
+@keyframes rotar{
+	0%{
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-0-transform: rotate(90deg);
+		-ns-transform: rotate(90deg);
+		transform: rotate(90deg);
+}
+    25%{
+    	-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-0-transform: rotate(180deg);
+		-ns-transform: rotate(180deg);
+		transform: rotate(180deg);
+}
+    50%{
+    	-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-0-transform: rotate(270deg);
+		-ns-transform: rotate(270deg);
+		transform: rotate(270deg);
+}
+    100%{
+    	-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-0-transform: rotate(360deg);
+		-ns-transform: rotate(360deg);
+		transform: rotate(360deg);
+    }
+}
+@keyframes aparecer{
+  from{width: 0;}
+  to{width: 24em;}
+}*/
+.imagen{
+    width: 400px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 5%;
+    animation-name: rotar, aparecer;
+    animation-duration: 3s;
+}
+
+.imagen:hover{
+	width: 410px;
+	height: 310px;
+	border: 5px solid white;
+	transform: 4s;
+}
+/*.imag{
+	animation-name: rotar, aparecer;
+	animation-duration: 5s;
+}*/
+div {
+	text-align: center;
+	border: 2px solid #333;
+	border-radius: 10px;
+	margin-top: 10px;
+	margin-bottom: 100px;
+	margin-right: 150px;
+	margin-left: 150px;
+	background-color: #999;
+}
+strong{
+	color: #000;
+}
+@keyframes an4 {/*color de fondo de la figura el cual ira cambiando e lo largo de la animacion*/
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+.anima4{
+  width: 100px;/*largo*/
+  height: 100px;/*ancho*/
+  position: relative;/*posision de la figura*/
+  background-color: red;/*color de fondo inicial*/
+  animation-name: an4;/*nombre de la animacion*/
+  animation-duration: 5s;/*duracion de la animacion*/
+  animation-iteration-count: infinite;/*veces o tiempo en que se repetira la animacion*/
+}
+@keyframes anim5 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; top:200px;}
+  50%  {background-color:blue; top:200px; }
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* The element to apply the animation to */
+.anima5 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: anim5;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+/* pantalla maximo 980px */
+@media screen and (max-width:980px) {
+.container {
+width:98%;
+}
+section {
+width:68%;
+}
+
+/* pantalla maximo 700px */
+@media screen and (max-width:700px) {
+aside,section {
+float:none;
+width:96%;
+font-size:1.2em;
+}
+nav, section {
+font-size:1.2em;
+}
+aside {
+margin-top:5px;
+background:#333;
+color: #fff;
+}
+nav ul {
+float:none;
+clear:both;
+}
+}
+/* pantalla maximo 480px */
+@media screen and (max-width:480px) {
+aside {
+display:block;
+background:#333;
+color: #fff;
+font-size:1.5em;
+}
+nav, section {
+font-size:1.5em;
+}
+section {
+width:94%;
+}
+nav ul {
+display: table;
+text-align: center;
+float: none;
+width:100%;
+}
+nav ul li {
+float:none;
+}
+}

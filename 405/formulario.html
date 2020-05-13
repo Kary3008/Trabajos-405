@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/formulario.css">
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h2 align="center">Formulario de registro</h2><hr>
+    <p align="center">Favor de llenar todos los datos del formulario</p>
+    <form name="registro" id="registro">
+      <br>
+      <input type="text" name="nombre" placeholder="Nombre"
+      required class="cajas">
+      <input type="text" name="apellidop" placeholder="Apellido Paterno"
+      required class="cajas">
+      <input type="text" name="apellidom" placeholder="Apellido Materno"
+      required class="cajas">
+      <input type="text" name="telefono" placeholder="Telefono"
+      required class="cajas">
+      <select name="genero" required class="cajas">
+        <option value="">Selecciona una opcion</option>
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+      </select>
+      <label>Año de nacimiento</label>
+      <input type="date" name="fecha" required class="cajas">
+      <input type="email" name="correo" placeholder="Email" required class="cajas">
+      <input type="password" name="contra" placeholder="password" required class="cajas">
+      <input type="submit" value="Registrar"id="btn">
+      <input type="reset" value="Borrar" id="btn">
+  </form>
+  <hr>
+  <p>Por favor dale clic</p><button id="boton" onclick="mensaje();">Aqui</button>
+<script>
+  function mensaje(){
+    alert("Hola, bienvenidos al mundo de la web");
+  }
+</script>
+  </body>
+</html>

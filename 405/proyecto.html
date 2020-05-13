@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><!--Empieza el head-->
+    <meta name="viewport" content="width=device-width, inital-scale=1"><!--Nos permite que va a ser un documento
+       que se pueda adaptar a una configuracion responsive -->
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/proyecto.css"> <!--Se utliza para llamar la hoja de estilos css -->
+    <link rel="stylesheet" type="text/css" href="css/fontello.css"><!--Mandar a llamar el  link para utilizar los iconos -->
+    <title>Menu Responsive</title><!--Colocamos el titulo de la pagina-->
+    <script>
+        function saludar(){
+          var tiempo = new Date();
+          var hora, cad = " Son las ";
+          with(tiempo){
+            hora = getHours();
+            cad += hora + ":" + getMinutes()+ ":" + getSeconds();
+          }
+          if (hora < 12)
+            cad = "Buenos días," + cad;
+
+          else if(hora < 18)
+          cad  = "Buenas tardes," + cad;
+
+          else
+            cad = "Buenas noches," + cad;
+
+            return cad
+        }
+    </script>
+  </head><!--Termina el head-->
+  <body>
+    <!-- inicia el menu responsive -->
+    <!-- Primera seccion-->
+      <section class="top-nav">
+        <!--Division 1--><div class="logo">
+           <a href="#"><img src="img/logoP.png" alt="Logotipo" class="logo"></a><!--Se coloca el logotipo-->
+        </div>
+        <input type="checkbox" id="menu-toggle"> <!--Al momento de clickear: aparecer o desaparecer el menu -->
+        <label for="menu-toggle" class="menu-button-container"><!--Rotulo para un elemento -->
+           <!--Division 2 --><div class="menu-button"></div>
+        </label>
+        <ul class="menu"><!--Colocar la lista desordenada-->
+          <li><a href="#"><span class="icon-users-1"></span> ¿Quienes somos?</a></li><!--La etiqueta span me va a permitir colocar un icono-->
+          <li><a href="#"><span class="icon-basket"></span> Producto</a></li> <!--Y en la etiqueta le vamos a poner una clase-->
+          <li><a href="#"><span class="icon-folder-open"></span> Galeria</a></li><!--El icono lo vamos a situar al lado del item-->
+          <li><a href="#"><span class="icon-chat"></span> Contacto</a></li>
+          <li><a href="#"><span class="icon-direction"></span> Acerca de...</a></li>
+        </ul>
+      </section>
+    <!-- termina el menu -->
+    <!--Segunda Seccion-->
+        <section class="componente">
+          <div class="parte1"><!--Se hace una primera division-->
+            <h1><script>document.write(saludar());</script></h1><!--Colocamos el contenido de la página-->
+          </div>
+          <div class="parte2"><!--SE hace una segunda division-->
+            <ul><!--En esta division se van a colocar los iconos-->
+              <li><a href="https://www.facebook.com/KaryPepperuwu" target="_blank"><span class="icon-facebook"></span></a></li><br><!--Nuevamente usamos la etiqueta span para colocar iconos de redes sociales-->
+              <li><a href="https://twitter.com/KarydNa9" target="_blank"><span class="icon-twitter"></span></a></li><br><!--Target se utiliza para generar una nueva pestaña-->
+              <li><a href="#"><span class="icon-whatsapp"></span></a></li><br><!--AL apretar el icono va a alojar al link que esta indicado-->
+              <li><a href="#"><span class="icon-instagram"></span></a></li><br>
+              <li><a href="#"><span class="icon-youtube"></span></a></li>
+            </ul>
+          </div>
+        </section>
+        <!--Termina seccion social-->
+        <!--Inicia slider-->
+        <section> <!--Se inicia con una nueva seccion en donde colocaremos un carrusel de imagenes-->
+          <div class="carousel-container"><!--Se nombra la clase de todo el contenido en el carrusel-->
+            <div class="carousel-item uno"><!--Se denominan los items osea lo que va a contener cada uno-->
+              <p>Texto imagen 1</p><!--Se coloca el tecto que va a ir en la imagen-->
+            </div><!--Termina division del primero-->
+            <div class="carousel-item dos"><!--Hacemos lo mismo que hicimos con la primera division-->
+              <p>Texto imagen 2</p>
+            </div><!--Termina division del segundo-->
+            <div class="carousel-item tres"><!--Hacemos lo mismo que hicimos con la primera division-->
+              <p>Texto imagen 3</p>
+            </div>
+            <!--Termina division del tercero-->
+            <div class="carousel-item cuatro"><!--Hacemos lo mismo que hicimos con la primera division-->
+              <p>Texto imagen 4</p>
+            </div><!--Termina division del cuarto-->
+          </div>
+        </section>
+        <!--Termina slider-->
+  </body>
+</html>

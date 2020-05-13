@@ -1,0 +1,244 @@
+@import url(https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap);/*Importar una url: la fuente que se va a utilizar*/
+
+html, body { /*Toma los elementos de hmtl y body*/
+  margin: 0;/*margen de 0pixels*/
+  height: 100%;/*Altura del 100%*/
+}
+* {
+  font-family: "Pathway Gothic One", sans-serif; /*Mandar a llamar la fuente de @import;*/
+  box-sizing: border-box;/*Siempre va a estar dentro de la caja*/
+  font-size: 21px;/*Tamaño de la fuente*/
+}
+.logo{/*Se modifica el logotipo*/
+  width: 100px;
+  height: 65px;
+}
+.top-nav {
+  display: flex; /*Display flexible*/
+  flex-direction: row;/*Va a tener la direccion row*/
+  align-items: center;/*Va a estar alineado al centro*/
+  justify-content: space-between;/*El contenido justificado va a distribuir los items; el primero al inicio el ultimo al final*/
+  background: linear-gradient(to left,  #222,#CC3333, #990000 );/*Colocar un fondo degradado en la barra de menu,
+  iniciando de la derecha*/
+  /*Nos sirve para estos navegadores: W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 65px; /*Alto de 65 pixels*/
+  padding: 1em;/*Establece el relleno de todos los lados de un elemento*/
+}
+.menu {
+  display: flex;/*Display flexible*/
+  flex-direction: row;/*El flex no va a tener ninguna direccion*/
+  list-style-type: none;/*Ningun estilo de lista*/
+  margin: 0;/*Margen es igual a 0*/
+  padding: 0;/*Va a tener un padding de 0*/
+}
+
+.menu > li { /*Elementos propios de la lista*/
+  margin: 0 1rem;/*Margin va a estar en 0, pero con 1em a la derecha*/
+}
+.menu li a{/*Se usa en esta clase el link que esta dentro de la lista*/
+  text-decoration: none;/*Quitar la linea debajo del texto*/
+  color: #fff;/*Color de la letra*/
+  padding: 5px;/*Padding de 5 pixels*/
+  margin-left: 4px; /*Margen a la derecha de 4 pixels*/
+  height: 65px;/*Una altura propia de los 65 pixels*/
+}
+.menu li a:hover{ /*Cuando el mouse este presionando algun link*/
+  border-style: dotted;/*Un borde punteado*/
+  border-left: none; /*Ningun borde izquierdo*/
+  border-top: none;/*Ningun borde*/
+  border-bottom: none;/*Ningun borde*/
+  color: #cccc99;/*Cambiar de color*/
+}
+.menu-button-container {
+  display: none;/*No mostrar el display*/
+  height: 100%;/*Altura del 100% de todo el container*/
+  width: 30px;/*Un ancho de 30 pixels*/
+  cursor: pointer; /*Un cursor tipo pointer*/
+  flex-direction: column;/*Una direccion de tipo columna */
+  justify-content: center;/*Justificar el contenido al centro*/
+  align-items: center;/*Alinear el contenido al centro*/
+}
+#menu-toggle {/*Para trabajar con un Id se una el simbolo: #*/
+  display: none;/*Ningun display*/
+}
+.menu-button,
+.menu-button::before,/*Al momento de apretar el boton*/
+.menu-button::after {/*Después del boton*/
+  display: block;/*Genera un cuadro de elemento de bloque*/
+  background-color: #ff9999;/*El color del boton*/
+  position: absolute;/*Su posicion va a ser absoluta*/
+  height: 5px;/*Va a tener un alto de 5 pixeles*/
+  width: 35px;/*Va a tener un ancho de 35 pixeles*/
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);/*Se va a hacer una transicion cubic,
+  con diferentes rotaciones*/
+  border-radius: 2px;/*Va a tener un border radio de 2 pixeles*/
+}
+
+.menu-button::before {/*Antes*/
+  content: "";/*El contenido va a estar vacio*/
+  margin-top: -8px;/*Y tendra un margen de -8 pixeles*/
+}
+
+.menu-button::after {/*Despues*/
+  content: "";/*El contenido va a estar vacio*/
+  margin-top: 8px;/*Va a regresar a 8 pixels*/
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {/*Al momento de chequear
+   va a concatenar y va a trabajar las clases que se mandan a llamar*/
+  margin-top: 0px;/*Un margen hacia arriba de cero*/
+  transform: rotate(405deg);/*Una rotacion de 405 grados*/
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {/*el menu va a cambiar*/
+  background: rgba(255, 255, 255, 0);/*Se va a ver transparente*/
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {/*Después de chequear,
+  las clases que se mandan a llar va a cambiar*/
+  margin-top: 0px;/*Se le va a dar un margen de 0*/
+  transform: rotate(-405deg);/*Va a regresar a los 405 grados*/
+}
+.componente{/*Clase*/
+  width: 100%;/*Va a ocupar el espacio de toda la pantalla*/
+  height: 20px;/*Va a tener una altura de 20 pixels*/
+}
+.parte1{/*Luego procedemos con la parte 1*/
+  width: 50%;/*Va a ocupar solo el 50% del ancho de la pagina*/
+  height:auto;/*EL componente por si solo ya tiene 50 pixels entonces se acomodarara automaticamente*/
+  position: relative;/*Va a tener una posicion relativa porque es flexible*/
+  float: left;/*Va a flotar a la derecha*/
+}
+.parte1 h1{/*dentro de la parte 1 existe un h1*/
+  color: #000;/*Le colocamos un color negro*/
+  font-size: 20px;/*Va a tener un font-size de 20 pixels*/
+  text-align: center;/*Y que este alineado al centro*/
+}
+.parte2{
+  width:50%;/*Va a tener el 50%*/
+  height: auto;/*E igual lo va a manejar auto como la parte 1*/
+  position: relative;/*Va a tener una posicion relativa porque es flexible*/
+  float: left;/*Y va a estar flotando a la derecha*/
+}
+.parte2 ul{/*Se va trabajar con la lista desordenada*/
+  display: flex;
+  justify-content: center;/*Y este justificado al centro*/
+}
+.parte2 li{/*Se va a trabajar la parte 2 con los elementos de la lista*/
+  margin: 0 1rem;/*Va a tener un margen de 0 */
+}
+.parte2 ul li{/*Dentro de la parte 2, se va a trabajar con la lista desordenada y también con los elementos de la lista*/
+  text-decoration: none;/*Ningún tipo de decoracion de texto*/
+  list-style: none;/*Ningun estilo de lista*/
+}
+.parte2 ul li a{/*Se configuran los elementos de la lista donde contienen los links*/
+  text-decoration: none;/*Ninguna decoracion de texto*/
+  color: #660000;/*Color de los iconos*/
+}
+.parte2 ul li a:hover{/*Cambiar el efecto al poner el cursor sobre el icono, dentro de la parte 2*/
+  color: #cc3333;/*se va a ocupar un color*/
+}
+
+/*Comienza estilo para slider*/
+.carousel-container{/*empezamos con la clase contenedora del carrusel*/
+  width: 100%;/*el ancho va a ser del 100%*/
+  height: auto;/*El alto va a estar en auto*/
+  margin: 20px auto;/*Con un margen de 20 pixels*/
+  background: #ccc;/*Y un color de fondo de gris*/
+  overflow-x: hidden;/*Se coloca un overflow-x para que el contenido se recorte y no proporcione ningún desplazamiento*/
+  display: flex;/*Y un display flexible*/
+}
+/*Items carrusel*/
+.carousel-item{/*Ahora seguimos con los items*/
+  width: 100%;/*un ancho del 100%*/
+  flex-shrink: 0;/*El elementono se va a encoger*/
+  animation: slide 70s;/*Se manda a llamar la animacion*/
+}
+.carousel-item p{
+  text-align: center;/*Texto alineado al centro*/
+  background-color: rgba(0, 0, 0, 0.4);/*Color transparente*/
+  width: 100%;/*Ancho 100%*/
+  margin: 35% auto 0;/*Magen del 35%*/
+  color: white;/*Color de la letra*/
+  padding: 25px 0;/*Establece el espacio de relleno*/
+}
+/*slider imagenes*/
+.uno{
+  background: url("../img/pro1.jpg")no-repeat;/*Se manda a llamar las imagenes a través de un url*/
+  background-size: cover;/*Lo usamos para configurar toda la imagen de fondo con dimensiones ya definidas*/
+}
+.dos{/*Se hace lo mismo que con la clase uno */
+  background: url("../img/pro3.jpg")no-repeat;
+  background-size: cover;
+}
+.tres{/*Se hace lo mismo que con la clase uno */
+  background: url("../img/imgp3.jpg")no-repeat;
+  background-size: cover;
+}
+.cuatro{/*Se hace lo mismo que con la clase uno */
+  background: url("../img/imgp4.jpg")no-repeat;
+  background-size: cover;
+}
+
+@keyframes slide {/*Animacion para el carrusel*/
+  0%{/*Empieza de cero*/
+    transform: translateX(0%);/*Se traslada a 0*/
+  }
+  25%{/*Sigue con 25%*/
+    transform: translateX(-100%);/*Se traslada a -100%*/
+  }
+  50%{/*Sigue con 50%*/
+    transform: translateX(-200%);/*Se traslada a -200%*/
+  }
+  75%{/*Sigue con 75%*/
+    transform: translateX(-300%);/*Se traslada a -300%*/
+  }
+  100%{/*Sigue con 100%*/
+    transform: translateX(0%);/*Regresa a 0*/
+  }
+}
+/*Termina estilo para slider*/
+/*Maximo de pantalla*/
+@media (max-width: 950px) {
+  .menu-button-container {
+    display: flex;/*La pantalla va a ser flexible*/
+  }
+  .menu {
+    position: absolute;/*Poner en posicion absoluta*/
+    top: 0;/*Alto de 0*/
+    margin-top: 65px;/*Margen de arriba de 50 pixels*/
+    left: 0;/*A la derecha de 0*/
+    flex-direction: column;/*Se va a convertir en una columna*/
+    width: 100%;/*El ancho va a estar al 100%*/
+    justify-content: center;/*El contenido va a estar justificado al centro*/
+    align-items: center;/*Los items los va a manejar al centro*/
+    z-index: 100;
+  }
+  #menu-toggle ~ .menu li {/*Va a seleccionar la clase menu  li*/
+    /*si no esta seleccionado*/
+    height: 0;/*Va a estar oculto porque sus valores estan en cero*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);/*Va a haber solo una transicion*/
+  }
+  #menu-toggle:checked ~ .menu li {
+    /*Al momento de estar chequeada*/
+    border: 1px solid #CC3333;/*va a dar un borde de un pixel, con un color*/
+    height: 2.5em;/*Va a dar una altura de 2.5em*/
+    padding: 0.5em;/*Y va a dar un padding de 0.5em*/
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);/*Va a dar una transicion*/
+  }
+  .menu > li {/*Como quiero que se vea el menu*/
+    display: flex;/*Va a tener un display flex*/
+    justify-content: center;/*El contenido va a estar justificado al centro*/
+    margin: 0;/*Va a tener un margen de 0*/
+    padding: 0.5em 0;/*Va a tener un espacio entre 0.5 y 0*/
+    width: 100%;/*Va a contener el 100% de la pantalla*/
+    color: white;/*Y va a tener un color blanco*/
+    background-color: #222;/*El background va a ser negro*/
+  }
+  .menu > li:not(:last-child) {/*El menu no se vera hasta que se herede*/
+    border-bottom: 1px solid #444;/*Va a tener un borde en el boton de 1 pixel con un color solido*/
+  }
+}

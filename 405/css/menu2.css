@@ -1,0 +1,138 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2{
+  vertical-align: center;
+  text-align: center;
+}
+html, body{
+  margin:0;
+  height:100%;
+}
+*{
+  font-family:"Raleway";
+  box-sizing: border-box;
+}
+.logo{
+  width:250px;
+  height:90px;
+}
+.top-nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #999;
+  background: linear-gradient(to left,#000,#999);
+  height: 50px;
+  padding: 1em;
+}
+.menu{
+  display: flex;
+  flex-direction: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu > li{
+  margin: 0 1rem;
+}
+.menu li a{
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+  margin-left: 4px;
+  height: 50px;
+}
+.menu li a:hover{
+  border-style: dotted;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  color:orange;
+}
+.menu-buttom-container{
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor:pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#menu-toggle{
+  display: none;
+}
+ .menu-buttom,
+ .menu-buttom::before,
+ .menu-buttom::after{
+   display: block;
+   background-color: #fff;
+   position: absolute;
+   height: 4px;
+   width: 30px;
+   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1); /* va a estar rotando*/
+   border-radius: 2px;
+ }
+
+ .menu-buttom::before{
+   content: "";
+   margin-top: 8px;
+ }
+
+ .menu-buttom::after{
+   content: "";
+   margin-top: 8px;
+ }
+ #menu-toggle:checked + .menu-buttom-container .menu-buttom::before{
+   margin-top: 0px;
+   transform: rotate(405deg);/*rotar antes*/
+ }
+
+ #menu-toggle:checked + .menu-buttom-container .menu-buttom{
+   background: rgba(255, 255, 255, 0);/*visualizacion transparente*/
+ }
+
+ #menu-toggle:checked + .menu-buttom-container .menu-buttom::after{
+   margin-top: 0px;
+   transform: rotate(-405deg); /*rotar despues*/
+ }
+
+ @media (max-witdh: 900px) { /*máximo de la pantalla*/
+   .menu-buttom-container{
+     display: flex;/*va a ser felxible*/
+   }
+   .menu{
+     position: absolute;/*posicion absoluta*/
+     top: 0;
+     margin-top: 50px; /*margen de 50 pixels*/
+     left: 0;
+     flex-direction: column; /*se va a convertir en columna*/
+     width: 100%;
+     justify-content: center;
+     align-items: center; /*Contenido lo va a manejar al centro*/
+   }
+     #menu-toggle ~ .menu li{/*Esta va a estar oculta*/
+       height: 0;
+       margin: 0;
+       padding: 0;
+       border: 0;
+       transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); /*animacion*/
+     }
+
+     #menu-toggle:checked ~ .menu li{ /*boton checked*/
+       border: 1px solid #333;
+       height: 2.5em;
+       padding: 0.5em;
+       transition: height 400ms cubic-bezier(0.23, 1. 0.23, 1);
+     }
+ }.menu > li{
+   display: flex;
+   justify-content: center;
+   margin: 0;
+   padding: 0.5em 0;
+   width: 100%;
+   color: white;
+   background-color: #222;
+ }
+ .menu > li:not(:last-child){
+   border-bottom: 1px solid #444;
+ }

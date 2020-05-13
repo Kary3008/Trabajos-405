@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=relaway);
+h2{
+	vertical-align:center;
+	text-align:center;s
+}
+html , body {
+  margin:0;
+  height:100;
+
+}
+*{
+  font-family: "relaway";
+  box-sizing: border -box;
+}
+.logo{
+  width:250px;
+  height: 90px;
+}
+.top-nav{
+  display: flex;
+  flex-direction: row;
+  aling-items-: center;
+  justify-content: space-between;
+  background-color: #999;
+  background: linear-gradient(to left, #000 , #999);
+  height: 50px;
+  padding: 1em;
+
+}
+.menu{
+  display:flex;
+  flex-direction: none;
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+.menu > li{
+  margin: 0 1rem;
+}
+.menu li a:hover{
+  border-style: dotted;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  color:green;
+}
+.menu-button-container{
+  display: none;
+  height: 100%;
+  width: 50px;
+  cursor: pointer;
+  flex-direction:column;
+  justify-content: center;
+  aling-items: center;
+}
+#menu-toggle{
+  display: none;
+}

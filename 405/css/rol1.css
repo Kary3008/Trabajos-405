@@ -1,0 +1,22 @@
+body{
+  background: #ccc;
+  font-size: 20px;
+  font-family: "Arial", Georgia, Serif;
+}
+.caja{
+  width: 50%;
+  background: #aaaaaa;
+  border-right: 0px;
+  border-left: 0px;
+  border-top: 0px;
+}
+h5{
+  color: purple;
+  font-size: 30px;
+}
+.imagen{
+	width: 350px;
+	height: 350px;
+	border:2px solid pink;
+	border-radius: 30%;
+}
